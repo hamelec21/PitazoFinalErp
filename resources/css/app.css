@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+
+
+/* css personalizado*/
+.bg-header
+{
+  background-color: #ed1b2d;
+}
+
+.bg-menu{
+    background-color:#255584;
+}
+
+.text-menu{
+    color: #255584;
+
+}
+
+
+/*slider*/
+
+.swiper-container {
+    overflow: hidden;
+    width: 100%;
+
+    }
+
+    .custom-swiper-container {
+    overflow: hidden;
+    width: 100%;
+
+    }
+
+    .swiper-wrapper {
+    display: flex;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+    color: #1a202c !important; /* Cambiar el color de los botones de navegación */
+    }
+
+
+    /* El icono será movido de izquierda a derecha */
+    .icon-soccer {
+        transition: transform 0.3s ease, margin-left 0.3s ease;
+    }
+
+    /* Cuando el contenedor recibe hover, mueve el icono de izquierda a derecha */
+    .group:hover .icon-soccer {
+        transform: translateX(20px); /* Desplaza 20px hacia la derecha */
+    }
+    @tailwind utilities;
