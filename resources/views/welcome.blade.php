@@ -36,17 +36,11 @@
             @livewire('tabla-general')
         </div>
 
-
-
-        
-
-
-
         <!-- Botones Campeonatos -->
         <div class="mt-5 mb-5 container mx-auto px-4">
             <div class="flex flex-col lg:flex-row justify-between gap-4">
                 <a href="{{route('campeonato-adulto')}}">
-                    <div class="bg-header w-full lg:w-1/4 h-20 flex justify-center items-center px-4 rounded-lg relative group">
+                    <div class="bg-header w-full lg:w-full h-20 flex justify-center items-center px-4 rounded-lg relative group">
                         @svg('iconpark-soccerone-o', ['class' => ' text-white w-8 mr-5 icon-soccer transition-all duration-300'])
                         <div class="flex justify-center">
                             <h4 class="text-white">Campeonato Adulto</h4>
@@ -54,7 +48,7 @@
                     </div>
                 </a>
                 <a href="{{route('campeonato-femenino')}}">
-                    <div class="bg-violet-600 w-full lg:w-1/4 h-20 flex justify-center items-center px-4 rounded-lg relative group">
+                    <div class="bg-violet-600 w-full lg:w-full h-20 flex justify-center items-center px-4 rounded-lg relative group">
                         @svg('iconpark-soccerone-o', ['class' => ' text-white w-8 mr-5 icon-soccer transition-all duration-300'])
                         <div class="flex justify-center">
                             <h4 class="text-white">Campeonato Femenino</h4>
@@ -62,7 +56,7 @@
                     </div>
                 </a>
                 <a href="{{route('campeonato-infantil')}}">
-                    <div class="bg-sky-600 w-full lg:w-1/4 h-20 flex justify-center items-center px-4 rounded-lg relative group">
+                    <div class="bg-sky-600 w-full lg:w-full h-20 flex justify-center items-center px-4 rounded-lg relative group">
                         @svg('iconpark-soccerone-o', ['class' => ' text-white w-8 mr-5 icon-soccer transition-all duration-300'])
                         <div class="flex justify-center">
                             <h4 class="text-white">Campeonato Infantil</h4>
@@ -70,7 +64,7 @@
                     </div>
                 </a>
                 <a href="{{route('campeonato-sub45')}}">
-                    <div class="bg-[#ff6b00] w-full lg:w-1/4 h-20 flex justify-center items-center px-4 rounded-lg relative group">
+                    <div class="bg-[#ff6b00] w-full lg:w-full h-20 flex justify-center items-center px-4 rounded-lg relative group">
                         @svg('iconpark-soccerone-o', ['class' => ' text-white w-8 mr-5 icon-soccer transition-all duration-300'])
                         <div class="flex justify-center">
                             <h4 class="text-white">Campeonato Sub45</h4>
