@@ -10,7 +10,8 @@ class Sliderclub extends Component
 
     public function render()
     {
-        $clubes = Club::orderBy('nombre', 'asc')->get();
+        $clubes = Club::orderBy('nombre', 'asc')->limit(15)->get();
+
         return view('livewire.sliderclub',compact('clubes'));
     }
 }
