@@ -206,7 +206,7 @@
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PG</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PE</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PP</th>
-                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GF</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">DG</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GC</th>
                         </tr>
                     </thead>
@@ -251,7 +251,7 @@
         {{-- Tabla puntaje primera --}}
         <div class=" bg-gray-100 mx-auto border border-gray-200 mt-2  overflow-x-auto px-1">
             <div class="flex flex-col items-center py-2  mt-1">
-                <h1 class="text-h4 lg:text-h3 font-bold text-center text-gray-600">Tabla de Puntaje Sub 45</h1>
+                <h1 class="text-h4 lg:text-h3 font-bold text-center text-gray-600">Tabla de Puntaje primeras</h1>
             </div>
 
             <div class="flex justify-center w-full overflow-x-auto">
@@ -265,7 +265,7 @@
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PG</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PE</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PP</th>
-                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GF</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">DG</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GC</th>
                         </tr>
                     </thead>

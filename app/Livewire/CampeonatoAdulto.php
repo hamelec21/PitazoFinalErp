@@ -103,7 +103,7 @@ class CampeonatoAdulto extends Component
          ->select(
              'club_id',
              DB::raw('SUM(puntos) as total_puntos'),
-             DB::raw('SUM(goles_local) as goles_a_favor'),
+             DB::raw('SUM(goles_visitante+goles_local) as goles_a_favor'),
              DB::raw('SUM(goles_visitante) as goles_en_contra'),
              DB::raw('COUNT(*) as partidos_jugados'),
              DB::raw('SUM(CASE WHEN puntos = 3 THEN 1 ELSE 0 END) as partidos_ganados'),
