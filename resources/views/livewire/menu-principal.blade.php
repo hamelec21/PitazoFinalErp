@@ -17,7 +17,7 @@
                     </div>
 
                     <!-- Menú lateral -->
-                    <div x-show="open" @click.away="open = false"
+                    <div x-show="open" @click.away="open = false" x-cloak
                         class="fixed inset-y-0 left-0 w-64 bg-menu shadow-lg z-50 transform transition-transform"
                         x-transition:enter="transition-transform duration-300 ease-out"
                         x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
