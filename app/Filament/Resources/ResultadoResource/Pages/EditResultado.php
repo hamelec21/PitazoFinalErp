@@ -10,6 +10,15 @@ class EditResultado extends EditRecord
 {
     protected static string $resource = ResultadoResource::class;
 
+
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::geturl('index');
+    }
+
+
+
     protected function getHeaderActions(): array
     {
         return [

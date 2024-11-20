@@ -75,6 +75,8 @@
         </div>
 
         <!-- Sección del footer -->
+
+        @livewire('footer')
     </main>
 
 

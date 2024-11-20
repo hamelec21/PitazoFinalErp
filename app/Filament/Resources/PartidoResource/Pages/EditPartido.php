@@ -10,10 +10,19 @@ class EditPartido extends EditRecord
 {
     protected static string $resource = PartidoResource::class;
 
+
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::geturl('index');
+    }
+
+
     protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),
         ];
     }
+
 }

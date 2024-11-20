@@ -6,12 +6,6 @@
                 <h1 class="uppercase text-h4 lg:text-h3 font-bold text-center text-gray-600">Campeonato Adulto</h1>
             </div>
         </div>
-
-
-        <div class="mx-auto">
-            @livewire('tabla-general')
-        </div>
-
         {{-- Tabla puntaje tercera --}}
         <div class=" bg-gray-100 mx-auto border border-gray-200 mt-2  overflow-x-auto px-1">
             <div class="flex flex-col items-center py-2  mt-1">

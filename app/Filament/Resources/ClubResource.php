@@ -39,6 +39,7 @@ class ClubResource extends Resource
                             ->disk('public') // Usa el disco 'public'
                             ->directory('club') // Especifica el directorio dentro de 'public'
                             ->visibility('public')
+                            ->optimize('webp')
                             ->minFiles(1)
                             ->maxFiles(1)
                     ])

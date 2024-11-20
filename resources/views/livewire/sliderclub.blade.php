@@ -1,7 +1,7 @@
 <div>
     <!-- Estructura del carrusel -->
 
-    <div class="container mx-auto -mt-5 mb-1 lg:mt-5 lg:mb-10">
+    <div class="container mx-auto -mt-5 mb-1 lg:mt-5 lg:mb-8">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 @foreach ($clubes as $club)
