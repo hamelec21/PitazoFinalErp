@@ -3,6 +3,7 @@
         <div class="container mx-auto px-4 py-2">
             <nav class="flex justify-between items-center">
                 <!--menu-->
+
                 <div x-data="{ open: false }" class="relative flex mt-2">
                     <!-- Botón de menú -->
                     <div class="flex flex-col items-center">
@@ -16,7 +17,7 @@
                         <span class="text-gray-100 text-[12px]">Menú</span>
                     </div>
 
-                    <!-- Menú lateral -->
+                    <!-- Menú lateral tipo modal-->
                     <div x-show="open" @click.away="open = false" x-cloak
                         class="fixed inset-y-0 left-0 w-64 bg-menu shadow-lg z-50 transform transition-transform"
                         x-transition:enter="transition-transform duration-300 ease-out"
