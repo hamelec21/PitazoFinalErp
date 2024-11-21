@@ -31,6 +31,12 @@
             @livewire('sliderclub')
         </div>
 
+        <div class="lg:mt-2 lg:mb-5 mt-7 container mx-auto px-4">
+            @livewire('informativo')
+        </div>
+
+
+
         <!-- Tabla General -->
         <div class="mb-5">
             @livewire('tabla-general')

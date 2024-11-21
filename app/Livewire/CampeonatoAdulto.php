@@ -99,7 +99,7 @@ class CampeonatoAdulto extends Component
 
          $primeras= Resultado::with('clubnombre')
          ->where('tipo_serie_id', 1)
-         ->where('serie_id', 3)
+         ->where('serie_id', 1)
          ->select(
              'club_id',
              DB::raw('SUM(puntos) as total_puntos'),
