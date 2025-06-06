@@ -1,5 +1,9 @@
 <div>
+<<<<<<< HEAD
     <div class="bg-menu w-full">
+=======
+    <div class=" w-full tabla">
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
         <div class="mx-auto  h-auto mt-2 mb-2">
             <div class="flex justify-center">
                 <h2 class="text-white font-bold lg:text-h3 mt-5">Tabla de Puntaje General</h2>

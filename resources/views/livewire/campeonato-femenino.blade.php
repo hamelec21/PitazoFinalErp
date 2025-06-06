@@ -12,6 +12,7 @@
                 <h1 class="text-h4 lg:text-h3 font-bold text-center text-gray-600">Tabla de Puntaje </h1>
             </div>
 
+<<<<<<< HEAD
             <div class="w-full bg-white rounded-2xl shadow-lg p-4 md:p-6">
     <h2 class="text-xl md:text-2xl font-bold text-gray-800 text-center mb-4">
         🏆 Tabla General
@@ -76,3 +77,61 @@
     </div>
 </div>
 
+=======
+            <div class="flex justify-center w-full overflow-x-auto">
+                <table class="table-auto border-collapse mt-5 mb-5 min-w-max">
+                    <thead>
+                        <tr class="bg-header text-white">
+                            <th class="px-1 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">Pos</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">Club</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg bg-violet-600">PTS</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PJ</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PG</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PE</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PP</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GF</th>
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($femeninas as $item)
+                            <tr class="border-b hover:bg-gray-100">
+                                <td class="text-center text-gray-800 mt-1 text-[10px] md:text-[14px]">
+                                    {{ $loop->iteration }}</td>
+                                <td
+                                    class="flex items-center space-x-4 px-4 mt-1 mb-1 whitespace-nowrap text-[10px] md:text-[16px] lg:text-lg">
+                                    <img src="{{ Storage::url($item->clubnombre->logo) }}"
+                                        alt="{{ $item->clubnombre->clubnombre }}" class="h-6 w-6 flex-shrink-0">
+                                    <span class="lg:text-lg text-gray-800">{{ $item->clubnombre->nombre }}</span>
+                                </td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg font-bold bg-violet-600 text-white">
+                                    {{ $item->total_puntos }}</td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg text-gray-800 font-light">
+                                    {{ $item->partidos_jugados }}</td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg text-gray-800 font-light">
+                                    {{ $item->partidos_ganados }}</td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg text-gray-800 font-light">
+                                    {{ $item->partidos_empatados }}</td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg text-gray-800 font-light">
+                                    {{ $item->partidos_perdidos }}</td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg text-gray-800 font-light">
+                                    {{ $item->goles_a_favor }}</td>
+                                <td
+                                    class="px-[13px] md:px-4 text-center text-[10px] md:text-[16px] lg:text-lg text-gray-800 font-light">
+                                    {{ $item->goles_en_contra }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696

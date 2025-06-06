@@ -12,7 +12,11 @@
         "codeat3/blade-solar-icons": "*",
         "filament/filament": "^3.2",
         "guzzlehttp/guzzle": "^7.2",
+<<<<<<< HEAD
         "joshembling/image-optimizer": "^1.5",
+=======
+        "joshembling/image-optimizer": "^1.4",
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",

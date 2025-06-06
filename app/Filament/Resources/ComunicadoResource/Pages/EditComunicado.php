@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\PartidoResource\Pages;
+namespace App\Filament\Resources\ComunicadoResource\Pages;
 
-use App\Filament\Resources\PartidoResource;
+use App\Filament\Resources\ComunicadoResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditPartido extends EditRecord
+class EditComunicado extends EditRecord
 {
-    protected static string $resource = PartidoResource::class;
+    protected static string $resource = ComunicadoResource::class;
 
 
 
@@ -17,12 +17,10 @@ class EditPartido extends EditRecord
         return $this->getResource()::geturl('index');
     }
 
-
     protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),
         ];
     }
-
 }

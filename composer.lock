@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "76e0399bf54a5776a2a6a961fa90c8ad",
+=======
+    "content-hash": "cdf9e88c497d338ed0502666114394a5",
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2644,6 +2648,7 @@
             },
             "type": "library",
             "extra": {
+<<<<<<< HEAD
                 "laravel": {
                     "aliases": {
                         "Image": "Intervention\\Image\\Facades\\Image"
@@ -2654,6 +2659,18 @@
                 },
                 "branch-alias": {
                     "dev-master": "2.4-dev"
+=======
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
                 }
             },
             "autoload": {
@@ -2700,6 +2717,7 @@
         },
         {
             "name": "joshembling/image-optimizer",
+<<<<<<< HEAD
             "version": "v1.5.0",
             "source": {
                 "type": "git",
@@ -2710,6 +2728,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/joshembling/image-optimizer/zipball/a7bc45d2b86098639c0ce3c382a47a35ff9a1d0d",
                 "reference": "a7bc45d2b86098639c0ce3c382a47a35ff9a1d0d",
+=======
+            "version": "v1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joshembling/image-optimizer.git",
+                "reference": "9f4d2ddfaffc28b19b6f7181987f83e4fb97123c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joshembling/image-optimizer/zipball/9f4d2ddfaffc28b19b6f7181987f83e4fb97123c",
+                "reference": "9f4d2ddfaffc28b19b6f7181987f83e4fb97123c",
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
                 "shasum": ""
             },
             "require": {
@@ -2727,12 +2757,21 @@
             "type": "library",
             "extra": {
                 "laravel": {
+<<<<<<< HEAD
                     "aliases": {
                         "ImageOptimizer": "Joshembling\\ImageOptimizer\\Facades\\ImageOptimizer"
                     },
                     "providers": [
                         "Joshembling\\ImageOptimizer\\ImageOptimizerServiceProvider"
                     ]
+=======
+                    "providers": [
+                        "Joshembling\\ImageOptimizer\\ImageOptimizerServiceProvider"
+                    ],
+                    "aliases": {
+                        "ImageOptimizer": "Joshembling\\ImageOptimizer\\Facades\\ImageOptimizer"
+                    }
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
                 }
             },
             "autoload": {
@@ -2772,7 +2811,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2025-02-24T14:07:06+00:00"
+=======
+            "time": "2024-11-05T15:43:11+00:00"
+>>>>>>> 9ed20951d27992a39ce8f0545525175b0a6d8696
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",

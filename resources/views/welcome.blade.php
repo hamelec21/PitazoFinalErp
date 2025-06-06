@@ -25,6 +25,12 @@
             @livewire('sliderclub')
         </div>
 
+        <div class="lg:mt-2 lg:mb-5 mt-7 container mx-auto px-4">
+            @livewire('informativo')
+        </div>
+
+
+
         <!-- Tabla General -->
         <div class="mb-5">
         {{--  --}}
@@ -69,6 +75,8 @@
         </div>
 
         <!-- Sección del footer -->
+
+        @livewire('footer')
     </main>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -2,7 +2,15 @@
 @tailwind components;
 
 
-/* css personalizado*/
+.tabla {
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(7deg,  #ed1b2d ,#255584);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(7deg,  #ed1b2d, #255584);
+}
+
+
+/* css personalizado rojo ed1b2b*/
 .bg-header
 {
   background-color: #ed1b2d;
@@ -11,6 +19,7 @@
 .bg-menu{
     background-color:#255584;
 }
+
 
 .text-menu{
     color: #255584;
