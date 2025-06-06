@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sancion extends Model
 {
     use HasFactory;
-    protected $fillable = ['club_id','fecha_id','nombre','sancion'];
+    protected $fillable = ['club_id','fecha_id','nombre','sancion','puntos','tipo_serie_id','serie_id','tipo_campeonato_id'];
 
     //relaciones
     public function club()

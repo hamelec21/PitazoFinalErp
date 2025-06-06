@@ -9,6 +9,8 @@ use App\Models\Club;
 use App\Models\Serie;
 use App\Models\TipoSerie;
 use App\Models\FechaFixture;
+use App\Models\Temporada;
+use App\Models\TipoCampeonato;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
@@ -30,21 +32,25 @@ class PartidoResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('fecha_fixture_id')
-                ->label('Fecha')
-                ->options(FechaFixture::all()->pluck('fecha', 'id'))
-                ->searchable()
-                ->required()
-                ->columnSpan('full'),
 
-                Select::make('club_local_id')
-                    ->label('Club Local')
-                    ->options(Club::all()->pluck('nombre', 'id'))
+                Select::make('temporada_id')
+                    ->label('Temporada')
+                    ->options(Temporada::all()->pluck('nombre', 'id'))
+                    ->default(Temporada::orderBy('created_at', 'asc')->first()?->id)
+                    ->searchable()
+                    ->required()
+                    ->columnSpan(2),
+
+                Select::make('fecha_fixture_id')
+                    ->label('Fecha')
+                    ->options(FechaFixture::all()->pluck('fecha', 'id'))
                     ->searchable()
                     ->required(),
-                Select::make('club_visitante_id')
-                    ->label('Club Visitante')
-                    ->options(Club::all()->pluck('nombre', 'id'))
+                Select::make('tipo_campeonato_id')
+                    ->label('Tipo Campeonato')
+                    ->options(
+                        TipoCampeonato::where('is_active', true)->pluck('nombre', 'id')
+                    )
                     ->searchable()
                     ->required(),
 
@@ -54,20 +60,34 @@ class PartidoResource extends Resource
                     ->searchable()
                     ->required(),
 
-                    Select::make('tipo_serie_id')
-                    ->label('Tipo Serie')
+                Select::make('tipo_serie_id')
+                    ->label('Categoría')
                     ->options(TipoSerie::all()->pluck('nombre', 'id'))
                     ->searchable()
                     ->required(),
 
-                    Forms\Components\TextInput::make('goles_local')
-                ->label('Goles Local')
-                ->required(),
+
+                Select::make('club_local_id')
+                    ->label('Club Local')
+                    ->options(Club::all()->pluck('nombre', 'id'))
+                    ->searchable()
+                    ->required(),
+
+                Forms\Components\TextInput::make('goles_local')
+                    ->label('Goles Local')
+                    ->required(),
+
+                Select::make('club_visitante_id')
+                    ->label('Club Visitante')
+                    ->options(Club::all()->pluck('nombre', 'id'))
+                    ->searchable()
+                    ->required(),
+                // ->extraAttributes(['class' => 'w-1/2']), // Puedes cambiar 'w-64' por otro ancho como 'w-full', 'w-1/2', etc.
+
 
                 Forms\Components\TextInput::make('goles_visitante')
-                ->label('Goles Visita')
-                ->required(),
-
+                    ->label('Goles Visita')
+                    ->required(),
             ]);
     }
 
@@ -76,28 +96,40 @@ class PartidoResource extends Resource
         return $table
             ->columns([
 
+
                 TextColumn::make('fecha_fixture_id')
-                ->label('Fecha'),
+                    ->label('Fecha'),
+                TextColumn::make('temporada.nombre')
+                    ->label('Temporada'),
                 TextColumn::make('clubLocal.nombre')
                     ->label('Club Local')
                     ->sortable()
                     ->searchable(),
+                TextColumn::make('goles_local')
+                    ->label('Goles Local'),
                 TextColumn::make('clubVisitante.nombre')
                     ->label('Club Visitante')
                     ->sortable()
                     ->searchable(),
+                TextColumn::make('goles_visitante')
+                    ->label('Goles Visitante'),
+
                 TextColumn::make('serie.nombre')
                     ->label('Serie')
                     ->sortable()
                     ->searchable(),
+
                 TextColumn::make('tipoSerie.nombre')
-                    ->label('Tipo de Serie')
+                    ->label('Categoria')
                     ->sortable()
                     ->searchable(),
-                TextColumn::make('goles_local')
-                    ->label('Goles Local'),
-                TextColumn::make('goles_visitante')
-                    ->label('Goles Visitante'),
+                TextColumn::make('tipoCampeonato.nombre')
+                    ->label('Campeonato')
+                    ->sortable()
+                    ->searchable(),
+
+
+
             ])
             ->filters([
                 //

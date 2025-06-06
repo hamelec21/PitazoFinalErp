@@ -16,7 +16,7 @@
     @livewire('menu-principal')
     <main class="h-auto z-10">
         <!-- Banner principal -->
-        <div class="w-full mb-2 mt-16 lg:mt-16">
+        <div class="w-full mb-2">
             <img src="{{ asset('img/banners/banner_home_1.png') }}" class="object-cover w-full" alt="banner">
         </div>
 
@@ -27,7 +27,7 @@
 
         <!-- Tabla General -->
         <div class="mb-5">
-        {{--  --}}    @livewire('tabla-general')
+        {{--  --}}
         </div>
 
         <!-- Botones Campeonatos -->

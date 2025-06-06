@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Partido extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'club_local_id',
         'club_visitante_id',
@@ -16,60 +19,11 @@ class Partido extends Model
         'fecha_fixture_id',
         'goles_local',
         'goles_visitante',
+        'tipo_campeonato_id',
+        'temporada_id',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::saved(function ($partido) {
-            $partido->calcularPuntos();
-        });
-    }
-
-    public function calcularPuntos()
-    {
-        $resultadoLocal = Resultado::firstOrNew([
-            'partido_id' => $this->id,
-            'club_id' => $this->club_local_id,
-        ]);
-
-        $resultadoVisitante = Resultado::firstOrNew([
-            'partido_id' => $this->id,
-            'club_id' => $this->club_visitante_id,
-        ]);
-
-        $resultadoLocal->serie_id = $this->serie_id;
-        $resultadoLocal->tipo_serie_id = $this->tipo_serie_id;
-        $resultadoLocal->fecha_fixture = $this->fecha_fixture_id;
-
-        // Asignar los goles de local y visitante
-        $resultadoLocal->goles_local = $this->goles_local;
-        $resultadoVisitante->goles_visitante = $this->goles_visitante;
-
-        $resultadoVisitante->serie_id = $this->serie_id;
-        $resultadoVisitante->tipo_serie_id = $this->tipo_serie_id;
-        $resultadoVisitante->fecha_fixture = $this->fecha_fixture_id;
-
-        if ($this->goles_local > $this->goles_visitante) {
-            $resultadoLocal->puntos = 3;
-            $resultadoVisitante->puntos = 0;
-        } elseif ($this->goles_local < $this->goles_visitante) {
-            $resultadoLocal->puntos = 0;
-            $resultadoVisitante->puntos = 3;
-        } else {
-            $resultadoLocal->puntos = 1;
-            $resultadoVisitante->puntos = 1;
-        }
-
-
-
-
-        $resultadoLocal->save();
-        $resultadoVisitante->save();
-    }
-
-
+    // Relaciones
     public function clubLocal()
     {
         return $this->belongsTo(Club::class, 'club_local_id');
@@ -90,8 +44,24 @@ class Partido extends Model
         return $this->belongsTo(TipoSerie::class);
     }
 
+    public function tipoCampeonato()
+    {
+        return $this->belongsTo(TipoCampeonato::class);
+    }
+
+    public function temporada()
+    {
+        return $this->belongsTo(Temporada::class, 'temporada_id');
+    }
 
 
+    public function partido(): HasOne
+    {
+        return $this->hasOne(Partido::class);
+    }
 
-
+    public function fixture(): BelongsTo
+    {
+        return $this->belongsTo(Fixture::class);
+    }
 }

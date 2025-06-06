@@ -35,6 +35,7 @@ class CampeonatoAdulto extends Component
 
     // Separar resultados por serie
     $resultados = $series->get(1, collect()); // Primeras serie adulta
+    $primeras = $series->get(1, collect()); // Primeras serie adulta
     $segundas = $series->get(2, collect()); // Segunda serie adulta
     $terceras = $series->get(3, collect()); // Tercera serie adulta
     $seniors = $series->get(4, collect()); // Senior serie adulta

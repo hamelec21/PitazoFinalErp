@@ -266,7 +266,7 @@
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PE</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">PP</th>
                             <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">DG</th>
-                            {{-- <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GC</th> --}}
+                            <th class="px-0 py-2 text-center text-[10px] md:text-[16px] lg:text-lg">GC</th>
                         </tr>
                     </thead>
                     <tbody>
