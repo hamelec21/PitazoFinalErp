@@ -39,7 +39,7 @@
         <!-- Botones Campeonatos -->
         <div class="mt-5 mb-5 container mx-auto px-4">
             <div class="flex flex-col lg:flex-row justify-between gap-4">
-                <a href="{{route('campeonato-adulto')}}">
+                <a href="#">
                     <div class="bg-header w-full lg:w-full h-20 flex justify-center items-center px-4 rounded-lg relative group">
                         @svg('iconpark-soccerone-o', ['class' => ' text-white w-8 mr-5 icon-soccer transition-all duration-300'])
                         <div class="flex justify-center">
