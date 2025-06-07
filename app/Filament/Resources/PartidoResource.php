@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Filament\Resources;
-
 use App\Filament\Resources\PartidoResource\Pages;
 use App\Filament\Resources\PartidoResource\RelationManagers;
 use App\Models\Partido;
@@ -67,7 +66,7 @@ class PartidoResource extends Resource
                     ->required(),
 
 
-                Select::make('club_local_id')
+                Forms\Components\Select::make('club_local_id')
                     ->label('Club Local')
                     ->options(Club::all()->pluck('nombre', 'id'))
                     ->searchable()
